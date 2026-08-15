@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Solicitá tu préstamo – Finanzas del Paraguay</title>
+<meta name="description" content="Completá tu solicitud de préstamo en menos de 2 minutos. Un asesor real se pone en contacto con vos.">
+<meta name="author" content="Finanzas del Paraguay">
+<meta name="robots" content="noindex">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Solicitá tu préstamo – Finanzas del Paraguay">
+<meta property="og:description" content="Completá tu solicitud de préstamo en menos de 2 minutos. Un asesor real se pone en contacto con vos.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/images/Logo.jpeg">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="icon" type="image/x-icon" href="/assets/images/Logo.jpeg">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo" style="text-decoration:none;">
+    <img src="assets/images/Logo.jpeg" alt="Logo Finanzas del Paraguay">
+    <div class="nav-brand">
+      Finanzas del Paraguay
+      <span>Soluciones financieras</span>
+    </div>
+  </a>
+  <a href="https://wa.me/5950976788864" class="nav-cta">
+    Hablar con un asesor →
+  </a>
+</nav>
+
+<!-- FORMULARIO -->
+<main class="form-main">
+
+  <div class="form-intro">
+    <div class="seccion-label">Solicitud en línea</div>
+    <h1 class="seccion-titulo">Solicitá tu<br><em>préstamo</em></h1>
+    <p class="form-intro-desc">
+      Respondé unas pocas preguntas y un asesor real se pone en contacto con vos.
+      Te lleva menos de 2 minutos.
+    </p>
+  </div>
+
+  <div class="form-card">
+
+    <!-- Progreso -->
+    <div id="progressWrap" class="progreso-wrap">
+      <div class="progreso-info">
+        <span id="progressLabel" class="progreso-paso">Paso 1 de 4</span>
+        <span id="progressPct" class="progreso-pct">25%</span>
+      </div>
+      <div class="progreso-track">
+        <div id="progressBar" class="progreso-barra" style="width:25%"></div>
+      </div>
+    </div>
+
+    <form id="solicitudForm" class="form-body" novalidate>
+
+      <!-- PASO 1 — INFORMCONF -->
+      <section class="step is-active" data-step="informconf" aria-labelledby="q-informconf">
+        <h2 id="q-informconf" class="step-titulo">¿Tenés <em>Informconf</em>?</h2>
+        <p class="step-desc">Nos referimos a si figurás actualmente con deudas informadas.</p>
+
+        <div class="opciones" role="radiogroup" aria-labelledby="q-informconf">
+          <label class="option">
+            <input type="radio" name="informconf" value="si">
+            <span class="option-box"><span class="option-dot"></span>Sí</span>
+          </label>
+          <label class="option">
+            <input type="radio" name="informconf" value="no">
+            <span class="option-box"><span class="option-dot"></span>No</span>
+          </label>
+        </div>
+        <p class="error-msg" data-error-for="informconf" role="alert"></p>
+      </section>
+
+      <!-- PASO 2 — SITUACIÓN LABORAL -->
+      <section class="step" data-step="ocupacion" aria-labelledby="q-ocupacion">
+        <h2 id="q-ocupacion" class="step-titulo">¿A qué te <em>dedicás</em>?</h2>
+        <p class="step-desc">Elegí la opción que mejor describa tu situación actual.</p>
+
+        <div class="opciones" role="radiogroup" aria-labelledby="q-ocupacion">
+          <label class="option">
+            <input type="radio" name="ocupacion" value="ips">
+            <span class="option-box"><span class="option-dot"></span>Tengo IPS — Más de 6 aportes</span>
+          </label>
+          <label class="option">
+            <input type="radio" name="ocupacion" value="funcionario_publico">
+            <span class="option-box"><span class="option-dot"></span>Soy funcionario público</span>
+          </label>
+          <label class="option">
+            <input type="radio" name="ocupacion" value="jubilado">
+            <span class="option-box"><span class="option-dot"></span>Soy jubilado</span>
+          </label>
+          <label class="option">
+            <input type="radio" name="ocupacion" value="factura_legal">
+            <span class="option-box"><span class="option-dot"></span>Emito factura legal</span>
+          </label>
+          <label class="option">
+            <input type="radio" name="ocupacion" value="ninguna">
+            <span class="option-box"><span class="option-dot"></span>Ninguna de las anteriores</span>
+          </label>
+        </div>
+        <p class="error-msg" data-error-for="ocupacion" role="alert"></p>
+      </section>
+
+      <!-- PASO 2.1 — DETALLE FACTURA LEGAL -->
+      <section class="step" data-step="detalle_factura" aria-labelledby="q-detalle">
+        <h2 id="q-detalle" class="step-titulo">¿A qué te dedicás <em>exactamente</em>?</h2>
+        <p class="step-desc">Contanos un poco más sobre tu actividad.</p>
+
+        <div class="opciones" role="radiogroup" aria-labelledby="q-detalle">
+          <label class="option">
+            <input type="radio" name="detalle_factura" value="asalariado_iva">
+            <span class="option-box"><span class="option-dot"></span>Soy asalariado con IVA</span>
+          </label>
+          <label class="option">
+            <input type="radio" name="detalle_factura" value="comerciante">
+            <span class="option-box"><span class="option-dot"></span>Comerciante</span>
+          </label>
+          <label class="option">
+            <input type="radio" name="detalle_factura" value="profesional_independiente">
+            <span class="option-box"><span class="option-dot"></span>Profesional independiente</span>
+          </label>
+        </div>
+        <p class="error-msg" data-error-for="detalle_factura" role="alert"></p>
+      </section>
+
+      <!-- PASO 3 — MONTO -->
+      <section class="step" data-step="monto" aria-labelledby="q-monto">
+        <h2 id="q-monto" class="step-titulo">¿Qué <em>monto</em> necesitás?</h2>
+        <p class="step-desc">Es un monto estimado. El asesor te confirma las condiciones finales.</p>
+
+        <!-- Las opciones se generan desde CONFIG.MONTOS -->
+        <div id="montosContainer" class="opciones" role="radiogroup" aria-labelledby="q-monto"></div>
+
+        <div id="montoOtroWrap" class="hidden" style="margin-top:1.2rem;">
+          <label for="montoOtro" class="campo-label">Indicá el monto en guaraníes</label>
+          <input
+            type="text"
+            id="montoOtro"
+            name="montoOtro"
+            class="field"
+            inputmode="numeric"
+            autocomplete="off"
+            placeholder="Ej: 7.000.000">
+        </div>
+
+        <p class="error-msg" data-error-for="monto" role="alert"></p>
+      </section>
+
+      <!-- PASO 4 — CONTACTO -->
+      <section class="step" data-step="contacto" aria-labelledby="q-contacto">
+        <h2 id="q-contacto" class="step-titulo">¿Cómo te <em>contactamos</em>?</h2>
+        <p class="step-desc">Usamos estos datos solo para comunicarnos con vos por tu solicitud.</p>
+
+        <div class="campos">
+          <div>
+            <label for="nombre" class="campo-label">Nombre</label>
+            <input type="text" id="nombre" name="nombre" class="field" autocomplete="given-name" placeholder="Juan" maxlength="60">
+            <p class="error-msg" data-error-for="nombre" role="alert"></p>
+          </div>
+
+          <div>
+            <label for="apellido" class="campo-label">Apellido</label>
+            <input type="text" id="apellido" name="apellido" class="field" autocomplete="family-name" placeholder="González" maxlength="60">
+            <p class="error-msg" data-error-for="apellido" role="alert"></p>
+          </div>
+
+          <div>
+            <label for="telefono" class="campo-label">Número de WhatsApp</label>
+            <div class="telefono-grupo">
+              <span class="telefono-prefijo">+595</span>
+              <input type="tel" id="telefono" name="telefono" class="field" inputmode="numeric" autocomplete="tel-national" placeholder="0981 123456" maxlength="15">
+            </div>
+            <p class="campo-ayuda">Ingresá tu número de celular paraguayo, con o sin el 0 inicial.</p>
+            <p class="error-msg" data-error-for="telefono" role="alert"></p>
+          </div>
+
+          <div>
+            <label for="ciudad" class="campo-label">Ciudad</label>
+            <select id="ciudad" name="ciudad" class="field"></select>
+            <p class="error-msg" data-error-for="ciudad" role="alert"></p>
+          </div>
+
+          <div id="ciudadOtraWrap" class="hidden">
+            <label for="ciudadOtra" class="campo-label">Escribí tu ciudad</label>
+            <input type="text" id="ciudadOtra" name="ciudadOtra" class="field" placeholder="Ej: Yby Yaú" maxlength="60">
+            <p class="error-msg" data-error-for="ciudadOtra" role="alert"></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- PANTALLA FINAL — SOLICITUD REGISTRADA -->
+      <section class="step final-bloque" data-step="exito" aria-labelledby="q-exito">
+        <div class="final-icono"><i class="bi bi-check-lg"></i></div>
+        <h2 id="q-exito" class="step-titulo">¡Solicitud <em>registrada</em>!</h2>
+        <p class="final-texto">
+          Gracias por tomarte el tiempo de completar el formulario.
+          Un asesor se pondrá en contacto con vos a la brevedad.
+          Para una atención más rápida, escribinos directamente al WhatsApp.
+        </p>
+        <a id="waExito" href="#" target="_blank" rel="noopener noreferrer" class="btn-form">
+          <i class="bi bi-whatsapp"></i>
+          Escribinos por WhatsApp
+        </a>
+        <a href="index.html" class="link-volver">Volver al inicio</a>
+      </section>
+
+      <!-- Navegación -->
+      <div id="navWrap" class="form-nav">
+        <button type="submit" id="btnContinuar" class="btn-form">
+          <span id="btnContinuarText">Continuar</span>
+          <span id="btnSpinner" class="spinner hidden"></span>
+        </button>
+        <button type="button" id="btnAtras" class="btn-atras hidden">
+          ← Volver a la pregunta anterior
+        </button>
+      </div>
+
+      <p id="errorEnvio" class="error-envio hidden" role="alert"></p>
+    </form>
+  </div>
+
+  <p class="form-nota">
+    Tus datos se utilizan únicamente para gestionar esta solicitud de préstamo.
+    No los compartimos con terceros ajenos al proceso.
+  </p>
+</main>
+
+<!-- Modal de rechazo -->
+<div id="modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal-card">
+    <div class="final-icono"><i class="bi bi-info-lg"></i></div>
+    <h2 id="modalTitle" class="modal-titulo">Gracias por tu interés en nuestra empresa</h2>
+    <p class="final-texto">
+      Según tus respuestas al formulario, la solicitud no va a ser factible.
+      Si creés que se trata de un error, no dudes en hacérnoslo saber escribiéndonos al WhatsApp.
+    </p>
+    <a id="waRechazo" href="#" target="_blank" rel="noopener noreferrer" class="btn-form">
+      <i class="bi bi-whatsapp"></i>
+      Escribinos por WhatsApp
+    </a>
+    <a href="index.html" class="link-volver">Volver al inicio</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <strong>Finanzas del Paraguay</strong> · Soluciones financieras para quienes sirven al país<br>
+  <span style="font-size:0.75rem; margin-top:0.5rem; display:block;">© <span id="currentYear">2025</span> · Todos los derechos reservados · Préstamos para funcionarios públicos</span>
+</footer>
+
+<!-- Botón flotante WhatsApp -->
+<a id="waFlotante" href="#" target="_blank" rel="noopener noreferrer"
+   aria-label="Escribinos por WhatsApp" class="wa-flotante">
+  <i class="bi bi-whatsapp"></i>
+</a>
+
+<script>
+/* =========================================================================
+   CONFIGURACIÓN — TODO lo que el cliente puede querer cambiar está acá.
+   ========================================================================= */
+const CONFIG = {
+    // Endpoint del backend FastAPI que recibe SOLO solicitudes válidas.
+    // En producción reemplazar por la URL real.
+    API_URL: 'https://api.evolucionpy.com.py/api/solicitudes/finanzasdelparaguay',
+
+    // Número de WhatsApp de la empresa (mismo del index.html)
+    WHATSAPP: '5950976788864',
+
+    // Mensajes precargados de WhatsApp
+    WA_MSG_RECHAZO: 'Hola, completé el formulario de solicitud y me indicó que no es factible. Quisiera consultar mi caso.',
+    WA_MSG_EXITO: 'Hola, acabo de enviar mi solicitud de préstamo por la web. Quisiera avanzar con la gestión.',
+    WA_MSG_GENERAL: 'Hola, me interesa su servicio. Quisiera recibir más información.',
+
+    // Montos ofrecidos (en guaraníes). PENDIENTE DE CONFIRMACIÓN DEL CLIENTE:
+    // ajustar libremente esta lista; el formulario se regenera solo.
+    MONTOS: [2000000, 5000000, 10000000, 15000000, 20000000, 30000000],
+
+    // Permitir que el usuario escriba un monto distinto a los predeterminados
+    PERMITIR_OTRO_MONTO: true,
+    MONTO_MINIMO: 1000000,
+    MONTO_MAXIMO: 50000000,
+
+    // Ciudades sugeridas. Agregar o quitar según la cobertura comercial.
+    CIUDADES: [
+        'Asunción', 'Ciudad del Este', 'San Lorenzo', 'Luque', 'Capiatá',
+        'Lambaré', 'Fernando de la Mora', 'Limpio', 'Ñemby', 'Encarnación',
+        'Mariano Roque Alonso', 'Pedro Juan Caballero', 'Itauguá', 'Villa Elisa',
+        'Coronel Oviedo', 'Presidente Franco', 'Concepción', 'Villarrica',
+        'Caaguazú', 'San Antonio', 'Itá', 'Areguá', 'Paraguarí', 'Pilar'
+    ],
+};
+
+/* =========================================================================
+   REGLAS DE NEGOCIO — deben estar replicadas en el backend (FastAPI).
+   El frontend nunca es la única barrera.
+   ========================================================================= */
+const REGLAS = {
+    // Tener Informconf rechaza la solicitud
+    informconfRechaza: 'si',
+    // Ocupaciones que rechazan
+    ocupacionesRechazadas: ['ninguna'],
+    // Ocupación que abre el paso 2.1
+    ocupacionConDetalle: 'factura_legal',
+    // Detalles de factura legal que rechazan
+    detallesRechazados: ['comerciante'],
+};
+
+/* =========================================================================
+   ESTADO — vive SOLO en el navegador hasta que la solicitud es válida.
+   ========================================================================= */
+const state = {
+    informconf: null,
+    ocupacion: null,
+    detalle_factura: null,
+    monto: null,
+    nombre: '',
+    apellido: '',
+    telefono: '',
+    ciudad: '',
+};
+
+let historial = [];      // pasos ya recorridos, para el botón "Volver"
+let pasoActual = 'informconf';
+let flujoFinalizado = false;
+let enviando = false;
+
+/* ========================= Helpers ========================= */
+
+const $  = (sel) => document.querySelector(sel);
+const $$ = (sel) => Array.from(document.querySelectorAll(sel));
+
+const formatoGs = (n) => new Intl.NumberFormat('es-PY').format(n);
+
+const waLink = (mensaje) =>
+    `https://wa.me/${CONFIG.WHATSAPP}?text=${encodeURIComponent(mensaje)}`;
+
+function mostrarError(campo, mensaje) {
+    const p = document.querySelector(`[data-error-for="${campo}"]`);
+    if (p) {
+        p.textContent = mensaje;
+        p.classList.add('show');
+    }
+    const input = document.getElementById(campo);
+    if (input) input.classList.add('has-error');
+}
+
+function limpiarError(campo) {
+    const p = document.querySelector(`[data-error-for="${campo}"]`);
+    if (p) {
+        p.textContent = '';
+        p.classList.remove('show');
+    }
+    const input = document.getElementById(campo);
+    if (input) input.classList.remove('has-error');
+}
+
+function limpiarErroresPaso() {
+    $$('.error-msg').forEach((p) => { p.textContent = ''; p.classList.remove('show'); });
+    $$('.field').forEach((f) => f.classList.remove('has-error'));
+    $('#errorEnvio').classList.add('hidden');
+}
+
+/* ========================= Construcción dinámica ========================= */
+
+function construirMontos() {
+    const cont = $('#montosContainer');
+    cont.innerHTML = '';
+
+    CONFIG.MONTOS.forEach((monto) => {
+        const label = document.createElement('label');
+        label.className = 'option';
+        label.innerHTML = `
+            <input type="radio" name="monto" value="${monto}">
+            <span class="option-box">
+                <span class="option-dot"></span>
+                Gs. ${formatoGs(monto)}
+            </span>`;
+        cont.appendChild(label);
+    });
+
+    if (CONFIG.PERMITIR_OTRO_MONTO) {
+        const label = document.createElement('label');
+        label.className = 'option';
+        label.innerHTML = `
+            <input type="radio" name="monto" value="otro">
+            <span class="option-box">
+                <span class="option-dot"></span>
+                Otro monto
+            </span>`;
+        cont.appendChild(label);
+    }
+
+    cont.addEventListener('change', (e) => {
+        if (e.target.name !== 'monto') return;
+        limpiarError('monto');
+        const esOtro = e.target.value === 'otro';
+        $('#montoOtroWrap').classList.toggle('hidden', !esOtro);
+        if (esOtro) $('#montoOtro').focus();
+    });
+}
+
+function construirCiudades() {
+    const sel = $('#ciudad');
+    sel.innerHTML = '<option value="">Seleccioná tu ciudad</option>';
+    CONFIG.CIUDADES.forEach((c) => {
+        const opt = document.createElement('option');
+        opt.value = c;
+        opt.textContent = c;
+        sel.appendChild(opt);
+    });
+    const otra = document.createElement('option');
+    otra.value = '__otra__';
+    otra.textContent = 'Otra ciudad';
+    sel.appendChild(otra);
+
+    sel.addEventListener('change', () => {
+        limpiarError('ciudad');
+        const esOtra = sel.value === '__otra__';
+        $('#ciudadOtraWrap').classList.toggle('hidden', !esOtra);
+        if (esOtra) $('#ciudadOtra').focus();
+    });
+}
+
+/* ========================= Navegación entre pasos ========================= */
+
+// Devuelve la secuencia de pasos vigente según lo respondido hasta ahora.
+function secuenciaPasos() {
+    const pasos = ['informconf', 'ocupacion'];
+    if (state.ocupacion === REGLAS.ocupacionConDetalle) pasos.push('detalle_factura');
+    pasos.push('monto', 'contacto');
+    return pasos;
+}
+
+function actualizarProgreso() {
+    const pasos = secuenciaPasos();
+    const idx = pasos.indexOf(pasoActual);
+
+    if (pasoActual === 'exito' || idx === -1) {
+        $('#progressWrap').classList.add('hidden');
+        return;
+    }
+
+    $('#progressWrap').classList.remove('hidden');
+    const total = pasos.length;
+    const actual = idx + 1;
+    const pct = Math.round((actual / total) * 100);
+
+    $('#progressLabel').textContent = `Paso ${actual} de ${total}`;
+    $('#progressPct').textContent = `${pct}%`;
+    $('#progressBar').style.width = `${pct}%`;
+}
+
+function mostrarPaso(id, { guardarHistorial = true } = {}) {
+    if (guardarHistorial && pasoActual !== id) historial.push(pasoActual);
+
+    pasoActual = id;
+    limpiarErroresPaso();
+
+    $$('.step').forEach((s) => s.classList.toggle('is-active', s.dataset.step === id));
+
+    actualizarProgreso();
+
+    // Botón "Volver": visible salvo en el primer paso y en la pantalla final
+    $('#btnAtras').classList.toggle('hidden', historial.length === 0 || id === 'exito');
+
+    // El botón CONTINUAR desaparece en la pantalla de éxito
+    $('#navWrap').classList.toggle('hidden', id === 'exito');
+    $('#btnContinuarText').textContent = (id === 'contacto') ? 'Enviar solicitud' : 'Continuar';
+
+    // Scroll suave al inicio de la tarjeta y foco al título del paso
+    const activa = document.querySelector('.step.is-active');
+    if (activa) {
+        const h2 = activa.querySelector('h2');
+        if (h2) { h2.setAttribute('tabindex', '-1'); h2.focus({ preventScroll: true }); }
+        activa.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+}
+
+function retroceder() {
+    if (!historial.length || flujoFinalizado) return;
+    const anterior = historial.pop();
+    mostrarPaso(anterior, { guardarHistorial: false });
+}
+
+/* ========================= Rechazo ========================= */
+
+// REGLA CRÍTICA: en el rechazo NO se hace POST, no se envía nada al backend.
+// Los datos quedan solo en memoria del navegador y el flujo termina.
+function rechazar() {
+    flujoFinalizado = true;
+
+    // Borramos los datos personales en memoria por las dudas.
+    state.nombre = '';
+    state.apellido = '';
+    state.telefono = '';
+    state.ciudad = '';
+
+    $('#modal').classList.remove('hidden');
+    $('#modal').classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+    $('#waRechazo').focus();
+}
+
+/* ========================= Validaciones por paso ========================= */
+
+const RE_SOLO_LETRAS = /^[A-Za-zÁÉÍÓÚÜÑáéíóúüñ' ]+$/;
+
+function validarNombreCampo(id, etiqueta) {
+    const input = document.getElementById(id);
+    const valor = input.value.trim().replace(/\s+/g, ' ');
+
+    if (!valor) {
+        mostrarError(id, `Por favor, ingresá tu ${etiqueta} para continuar.`);
+        return null;
+    }
+    if (valor.length < 2) {
+        mostrarError(id, `Ingresá tu ${etiqueta} completo.`);
+        return null;
+    }
+    if (!RE_SOLO_LETRAS.test(valor)) {
+        mostrarError(id, `El ${etiqueta} solo puede tener letras y espacios.`);
+        return null;
+    }
+    return valor;
+}
+
+// Celulares de Paraguay: 9 dígitos que empiezan con 9 (ej. 981123456),
+// aceptados también como 0981123456 o +595981123456.
+function validarTelefono() {
+    const bruto = $('#telefono').value.replace(/\D/g, '');
+
+    if (!bruto) {
+        mostrarError('telefono', 'Por favor, ingresá tu número de WhatsApp.');
+        return null;
+    }
+
+    let nacional = bruto;
+    if (nacional.startsWith('595')) nacional = nacional.slice(3);
+    if (nacional.startsWith('0'))   nacional = nacional.slice(1);
+
+    if (!/^9\d{8}$/.test(nacional)) {
+        mostrarError('telefono', 'Revisá el número. Debe ser un celular paraguayo, ej: 0981 123456.');
+        return null;
+    }
+    return `595${nacional}`;
+}
+
+function validarPaso(id) {
+    limpiarErroresPaso();
+
+    if (id === 'informconf') {
+        const sel = document.querySelector('input[name="informconf"]:checked');
+        if (!sel) {
+            mostrarError('informconf', 'Por favor, elegí una opción para continuar.');
+            return false;
+        }
+        state.informconf = sel.value;
+        return true;
+    }
+
+    if (id === 'ocupacion') {
+        const sel = document.querySelector('input[name="ocupacion"]:checked');
+        if (!sel) {
+            mostrarError('ocupacion', 'Por favor, elegí una opción para continuar.');
+            return false;
+        }
+        state.ocupacion = sel.value;
+        // Si cambia de opción y ya no corresponde el paso 2.1, limpiamos el detalle.
+        if (state.ocupacion !== REGLAS.ocupacionConDetalle) state.detalle_factura = null;
+        return true;
+    }
+
+    if (id === 'detalle_factura') {
+        const sel = document.querySelector('input[name="detalle_factura"]:checked');
+        if (!sel) {
+            mostrarError('detalle_factura', 'Por favor, elegí una opción para continuar.');
+            return false;
+        }
+        state.detalle_factura = sel.value;
+        return true;
+    }
+
+    if (id === 'monto') {
+        const sel = document.querySelector('input[name="monto"]:checked');
+        if (!sel) {
+            mostrarError('monto', 'Por favor, elegí el monto que necesitás.');
+            return false;
+        }
+
+        if (sel.value === 'otro') {
+            const digitos = $('#montoOtro').value.replace(/\D/g, '');
+            const monto = parseInt(digitos, 10);
+            if (!digitos || isNaN(monto)) {
+                mostrarError('monto', 'Escribí el monto que necesitás.');
+                return false;
+            }
+            if (monto < CONFIG.MONTO_MINIMO || monto > CONFIG.MONTO_MAXIMO) {
+                mostrarError('monto',
+                    `El monto debe estar entre Gs. ${formatoGs(CONFIG.MONTO_MINIMO)} y Gs. ${formatoGs(CONFIG.MONTO_MAXIMO)}.`);
+                return false;
+            }
+            state.monto = monto;
+        } else {
+            state.monto = parseInt(sel.value, 10);
+        }
+        return true;
+    }
+
+    if (id === 'contacto') {
+        let ok = true;
+
+        const nombre = validarNombreCampo('nombre', 'nombre');
+        if (!nombre) ok = false;
+
+        const apellido = validarNombreCampo('apellido', 'apellido');
+        if (!apellido) ok = false;
+
+        const telefono = validarTelefono();
+        if (!telefono) ok = false;
+
+        let ciudad = $('#ciudad').value;
+        if (!ciudad) {
+            mostrarError('ciudad', 'Por favor, elegí tu ciudad para continuar.');
+            ok = false;
+        } else if (ciudad === '__otra__') {
+            const otra = $('#ciudadOtra').value.trim().replace(/\s+/g, ' ');
+            if (!otra) {
+                mostrarError('ciudadOtra', 'Escribí el nombre de tu ciudad.');
+                ok = false;
+            } else if (!RE_SOLO_LETRAS.test(otra)) {
+                mostrarError('ciudadOtra', 'La ciudad solo puede tener letras y espacios.');
+                ok = false;
+            } else {
+                ciudad = otra;
+            }
+        }
+
+        if (!ok) {
+            // Llevamos el foco al primer campo con error
+            const primero = document.querySelector('.field.has-error');
+            if (primero) primero.focus();
+            return false;
+        }
+
+        state.nombre = nombre;
+        state.apellido = apellido;
+        state.telefono = telefono;
+        state.ciudad = ciudad;
+        return true;
+    }
+
+    return true;
+}
+
+/* ========================= Evaluación de elegibilidad ========================= */
+
+// Devuelve true si el paso recién respondido descalifica al solicitante.
+function provocaRechazo(id) {
+    if (id === 'informconf') {
+        return state.informconf === REGLAS.informconfRechaza;
+    }
+    if (id === 'ocupacion') {
+        return REGLAS.ocupacionesRechazadas.includes(state.ocupacion);
+    }
+    if (id === 'detalle_factura') {
+        return REGLAS.detallesRechazados.includes(state.detalle_factura);
+    }
+    return false;
+}
+
+function siguientePaso() {
+    const pasos = secuenciaPasos();
+    const idx = pasos.indexOf(pasoActual);
+    return pasos[idx + 1] || null;
+}
+
+/* ========================= Envío al backend ========================= */
+
+function armarPayload() {
+    return {
+        nombre: state.nombre,
+        apellido: state.apellido,
+        telefono: state.telefono,             // normalizado: 595XXXXXXXXX
+        ciudad: state.ciudad,
+        tiene_informconf: state.informconf === 'si',
+        situacion_laboral: state.ocupacion,
+        detalle_actividad: state.detalle_factura,
+        tiene_ips: state.ocupacion === 'ips',
+        monto_solicitado: state.monto,
+        origen: 'web_formulario',
+    };
+}
+
+function setEnviando(activo) {
+    enviando = activo;
+    $('#btnContinuar').disabled = activo;
+    $('#btnSpinner').classList.toggle('hidden', !activo);
+    $('#btnContinuarText').textContent = activo ? 'Enviando...' : 'Enviar solicitud';
+}
+
+async function enviarSolicitud() {
+    setEnviando(true);
+    $('#errorEnvio').classList.add('hidden');
+
+    try {
+        const resp = await fetch(CONFIG.API_URL, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(armarPayload()),
+        });
+
+        if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+
+        flujoFinalizado = true;
+        historial = [];
+        mostrarPaso('exito', { guardarHistorial: false });
+    } catch (err) {
+        // Nunca mostramos el error técnico al usuario.
+        console.error('Error al enviar la solicitud:', err);
+        $('#errorEnvio').textContent =
+            'No pudimos registrar tu solicitud en este momento. Escribinos por WhatsApp y te ayudamos enseguida.';
+        $('#errorEnvio').classList.remove('hidden');
+    } finally {
+        setEnviando(false);
+    }
+}
+
+/* ========================= Listeners ========================= */
+
+$('#solicitudForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    if (flujoFinalizado || enviando) return;
+
+    const id = pasoActual;
+    if (!validarPaso(id)) return;
+
+    // Filtro de elegibilidad: si rechaza, el flujo termina acá.
+    // No se hace ningún POST ni se envía dato personal alguno.
+    if (provocaRechazo(id)) {
+        rechazar();
+        return;
+    }
+
+    if (id === 'contacto') {
+        await enviarSolicitud();
+        return;
+    }
+
+    const siguiente = siguientePaso();
+    if (siguiente) mostrarPaso(siguiente);
+});
+
+$('#btnAtras').addEventListener('click', retroceder);
+
+// Limpieza de errores al elegir una opción
+$$('input[type="radio"]').forEach((r) => {
+    r.addEventListener('change', () => limpiarError(r.name));
+});
+
+// Los campos de texto limpian su error al escribir
+['nombre', 'apellido', 'telefono', 'ciudadOtra'].forEach((id) => {
+    const el = document.getElementById(id);
+    if (el) el.addEventListener('input', () => limpiarError(id));
+});
+
+// Nombre y apellido: bloquear números en el momento
+['nombre', 'apellido', 'ciudadOtra'].forEach((id) => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.addEventListener('input', () => {
+        const limpio = el.value.replace(/[^A-Za-zÁÉÍÓÚÜÑáéíóúüñ' ]/g, '');
+        if (limpio !== el.value) el.value = limpio;
+    });
+});
+
+// Teléfono: solo dígitos y espacios
+$('#telefono').addEventListener('input', (e) => {
+    const limpio = e.target.value.replace(/[^\d ]/g, '');
+    if (limpio !== e.target.value) e.target.value = limpio;
+});
+
+// Monto "otro": formateo con separador de miles mientras se escribe
+$('#montoOtro').addEventListener('input', (e) => {
+    limpiarError('monto');
+    const digitos = e.target.value.replace(/\D/g, '');
+    e.target.value = digitos ? formatoGs(parseInt(digitos, 10)) : '';
+});
+
+// Enter en un campo de texto avanza de paso en lugar de romper el flujo
+$('#solicitudForm').addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' && e.target.tagName === 'INPUT') {
+        e.preventDefault();
+        $('#btnContinuar').click();
+    }
+});
+
+/* ========================= Init ========================= */
+
+(function init() {
+    construirMontos();
+    construirCiudades();
+
+    $('#waRechazo').href  = waLink(CONFIG.WA_MSG_RECHAZO);
+    $('#waExito').href    = waLink(CONFIG.WA_MSG_EXITO);
+    $('#waFlotante').href = waLink(CONFIG.WA_MSG_GENERAL);
+
+    $('#currentYear').textContent = new Date().getFullYear();
+
+    actualizarProgreso();
+})();
+</script>
+</body>
+</html>
